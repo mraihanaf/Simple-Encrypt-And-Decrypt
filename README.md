@@ -1,5 +1,5 @@
 # Simple-Encrypt-And-Decrypt
-My first encrypt and decrypt script
+My first encryption and decryption script
 
 # Run
  ``` console
