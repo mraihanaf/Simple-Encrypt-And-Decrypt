@@ -108,6 +108,8 @@ class App {
         } else {
             await this.#handleDecryption()
         }
+
+        await this.#askToRunAgain()
     }
 
     #printHeader(){
@@ -139,7 +141,6 @@ class App {
         })
         const encryptedMessage = this.cryptoEngine.encrypt(ask1.msg, ask2.password)
         console.log("Encrypted Message: " + chalk.blue(encryptedMessage))
-        await this.#askToRunAgain()
     }
 
     async #handleDecryption(){
@@ -178,6 +179,6 @@ class App {
     }
 }
 
-// Start the app
+// start the app
 const app = new App(new AESCrypto())
 app.start()
